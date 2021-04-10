@@ -1,0 +1,19 @@
+<app-header3></app-header3>
+<div>
+    <table style="width:100%" *ngFor='let suggest of suggests'>
+        <tr>
+          <th>Moviename</th>
+          <th>Year</th>
+          <th>Language</th>
+          <th>Genre</th>
+        </tr>
+        <tr style="align-content: center;">
+          <td>{{suggest.name}}</td>
+          <td>{{suggest.year}}</td>
+          <td>{{suggest.language}}</td>
+          <td>{{suggest.genre}}</td>
+          
+        </tr>
+        
+      </table>
+</div>

@@ -1,0 +1,27 @@
+<app-header3></app-header3>
+<div>
+    <table style="width:100%" *ngFor='let review of reviews'>
+        <tr>
+          <th>Moviename</th>
+          <th>Year</th>
+          <th>Language</th>
+          <th>Genre</th>
+          <th>Rating</th>
+          <th>Description</th>
+          <th>Image</th>
+        </tr>
+        <tr>
+          <td>{{review.filmName}}</td>
+          <td>{{review.filmYear}}</td>
+          <td>{{review.filmLanguage}}</td>
+          <td>{{ review.filmGenre}}</td>
+          <td>{{review.filmRating}}</td>
+          <td>{{review.filmDesc}}</td>
+          <td>{{ review.filmImage}}</td>
+          <button (click)="editReview(review)">Update</button>
+          <button (click)="deleteReview(review)">Delete</button>
+        </tr>
+        
+      </table>
+</div>
+

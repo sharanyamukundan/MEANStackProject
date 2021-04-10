@@ -1,0 +1,59 @@
+<app-header2></app-header2>
+
+<div class="container">
+
+    <div class="row">
+
+      <div class="col-lg-3">
+
+        <h1 class="my-4">Films For You</h1>
+        <div class="list-group">
+          <a routerLink="/review" style="color: rgb(231, 94, 94);" class="list-group-item ">For You</a>
+          <!-- <a routerLink="/malayalam" style="color: rgb(231, 94, 94);" class="list-group-item ">Malayalam</a>
+          <a routerLink="/tamil" style="color: rgb(231, 94, 94);" class="list-group-item">Tamil</a>
+          <a routerLink="/english" style="color: rgb(231, 94, 94);" class="list-group-item">English</a> -->
+        </div>
+
+      </div>
+      <!-- /.col-lg-3 -->
+
+      <div class="col-lg-9">
+
+        
+       
+         
+          <div class="row" >
+          <div class="col-lg-4 mb-4" *ngFor='let review of reviews'>
+            <div class="card h-100" >
+              <img  class="card-img-top"  src="{{ review.filmImage}}" alt="">
+              <div class="card-body">
+                <h4 class="card-title">
+                  <a href="" style="color: rgb(231, 94, 94);">{{review.filmName}}</a>
+                  &nbsp;<span>{{ review.filmGenre}}</span>
+                </h4>
+                <h5>{{review.filmYear}}</h5>
+              <h5>{{review.filmLanguage}}</h5> 
+                <p class="card-text">{{review.filmDesc}}</p>
+              </div>
+              <div class="card-footer">
+                <small class="text-muted">Rating:{{review.filmRating}}</small>
+              </div>
+            </div>
+          </div>
+       
+
+          
+         
+
+          
+        </div>
+        <!-- /.row -->
+
+      </div>
+      <!-- /.col-lg-9 -->
+
+    </div>
+    <!-- /.row -->
+
+  </div>
+  <!-- /.container -->
